@@ -1,3 +1,3 @@
 # pet-clinic
 
-John Thompsons spring framework Beginner to Guru practical project
+Spring Framework 5: Beginner to Guru - practical project
