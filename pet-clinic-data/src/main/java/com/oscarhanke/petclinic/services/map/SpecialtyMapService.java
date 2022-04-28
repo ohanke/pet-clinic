@@ -1,13 +1,13 @@
 package com.oscarhanke.petclinic.services.map;
 
 import com.oscarhanke.petclinic.model.Specialty;
-import com.oscarhanke.petclinic.services.SpecialtiesService;
+import com.oscarhanke.petclinic.services.SpecialtyService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class SpecialtiesMapService extends AbstractMapService<Specialty, Long> implements SpecialtiesService {
+public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {
         return super.findAll();
@@ -25,7 +25,7 @@ public class SpecialtiesMapService extends AbstractMapService<Specialty, Long> i
 
     @Override
     public Specialty save(Specialty specialty) {
-        return super.save(save(specialty));
+        return super.save(specialty);
     }
 
     @Override
