@@ -1,13 +1,13 @@
 package com.oscarhanke.petclinic.services.map;
 
 import com.oscarhanke.petclinic.model.Pet;
-import com.oscarhanke.petclinic.services.CrudService;
+import com.oscarhanke.petclinic.services.PetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
