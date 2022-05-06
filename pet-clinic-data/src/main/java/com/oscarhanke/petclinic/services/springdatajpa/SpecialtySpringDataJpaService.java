@@ -27,8 +27,8 @@ public class SpecialtySpringDataJpaService implements SpecialtyService {
     }
 
     @Override
-    public Specialty findById(Long Id) {
-        return specialtyRepository.findById(Id).orElse(null);
+    public Specialty findById(Long id) {
+        return specialtyRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class SpecialtySpringDataJpaService implements SpecialtyService {
     }
 
     @Override
-    public void deleteById(Long Id) {
-        specialtyRepository.deleteById(Id);
+    public void deleteById(Long id) {
+        specialtyRepository.deleteById(id);
     }
 }

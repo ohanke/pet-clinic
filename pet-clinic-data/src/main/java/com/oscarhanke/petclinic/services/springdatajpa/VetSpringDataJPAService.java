@@ -27,8 +27,8 @@ public class VetSpringDataJPAService implements VetService {
     }
 
     @Override
-    public Vet findById(Long Id) {
-        return vetRepository.findById(Id).orElse(null);
+    public Vet findById(Long id) {
+        return vetRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class VetSpringDataJPAService implements VetService {
     }
 
     @Override
-    public void deleteById(Long Id) {
-        vetRepository.deleteById(Id);
+    public void deleteById(Long id) {
+        vetRepository.deleteById(id);
     }
 }
