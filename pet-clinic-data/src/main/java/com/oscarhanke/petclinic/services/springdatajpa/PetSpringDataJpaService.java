@@ -23,12 +23,12 @@ public class PetSpringDataJpaService implements PetService {
     public Set<Pet> findAll() {
         Set<Pet> pets = new HashSet<>();
         petRepository.findAll().forEach(pets::add);
-        return pets
+        return pets;
     }
 
     @Override
-    public Pet findById(Long Id) {
-        return petRepository.findById(Id).orElse(null);
+    public Pet findById(Long id) {
+        return petRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class PetSpringDataJpaService implements PetService {
     }
 
     @Override
-    public void deleteById(Long Id) {
-        petRepository.deleteById(Id);
+    public void deleteById(Long id) {
+        petRepository.deleteById(id);
     }
 }

@@ -27,8 +27,8 @@ public class PetTypeSpringDataJpaService implements PetTypeService {
     }
 
     @Override
-    public PetType findById(Long Id) {
-        return petTypeRepository.findById(Id).orElse(null);
+    public PetType findById(Long id) {
+        return petTypeRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class PetTypeSpringDataJpaService implements PetTypeService {
     }
 
     @Override
-    public void deleteById(Long Id) {
-        petTypeRepository.deleteById(Id);
+    public void deleteById(Long id) {
+        petTypeRepository.deleteById(id);
     }
 }
