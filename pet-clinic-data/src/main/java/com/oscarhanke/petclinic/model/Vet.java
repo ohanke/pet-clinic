@@ -1,5 +1,11 @@
 package com.oscarhanke.petclinic.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -9,6 +15,11 @@ import javax.persistence.Table;
 import java.util.HashSet;
 import java.util.Set;
 
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "vets")
 public class Vet extends Person{
@@ -19,11 +30,4 @@ public class Vet extends Person{
             inverseJoinColumns = @JoinColumn(name = "speciality_id"))
     private Set<Specialty> specialities = new HashSet<>();
 
-    public Set<Specialty> getSpecialities() {
-        return specialities;
-    }
-
-    public void setSpecialities(Set<Specialty> specialities) {
-        this.specialities = specialities;
-    }
 }
