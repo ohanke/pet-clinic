@@ -1,6 +1,5 @@
 package com.oscarhanke.petclinic.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,11 +17,15 @@ import java.util.Set;
 @Setter
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "vets")
 public class Vet extends Person{
+
+    @Builder
+    public Vet(Long id, String firstName, String lastName, Set<Specialty> specialities) {
+        super(id, firstName, lastName);
+        this.specialities = specialities;
+    }
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "vet_specialities",
